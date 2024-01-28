@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".add_group">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/back3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/institute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:text="Add New Group"
+            android:textColor="#FDFDFD"
+            android:textSize="23sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/group_photo"
+            android:src="@drawable/group_avatar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="250dp">
+
+        </ImageView>
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:layout_width="200dp"-->
+<!--            android:id="@+id/uploadProfile"-->
+<!--            android:src="@drawable/profile"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_height="200dp">-->
+<!--        </de.hdodenhof.circleimageview.CircleImageView>-->
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-49dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/circle_2"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:id="@+id/camera"
+            android:autofillHints="add group photo"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="0dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_baseline_camera_alt_24"
+            android:layout_height="30dp">
+
+        </ImageButton>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField5"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="60dp"
+            android:hint="Enter Group Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Admin by Name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="80dp">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:id="@+id/autoCompleteTextViewSearchAdmin"
+                android:layout_height="70dp">
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginTop="1dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_group_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/color_warning"
+            android:text="Add Group"
+            android:textAllCaps="false"
+            android:textColor="#fafafa"
+            android:textSize="20sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+</ScrollView>
+

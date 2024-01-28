@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_item_profile"
+            android:icon="@drawable/single_avatar"
+            android:showAsAction="ifRoom"
+            android:title="See your Profile" />
+        <item
+            android:id="@+id/action_item_view_group_post"
+            android:icon="@drawable/group_avatar"
+            android:showAsAction="ifRoom"
+            android:title="View Group Post" />
+
+
+<!--        <item-->
+<!--        android:id="@+id/action_item_add_group_post"-->
+<!--        android:title="Add New Group Post"-->
+<!--        android:icon="@android:drawable/ic_menu_edit"-->
+<!--        android:showAsAction="ifRoom" />-->
+
+        <item
+            android:id="@+id/action_item_add_post"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:showAsAction="ifRoom"
+            android:title="Add New Post" />
+        <item
+            android:id="@+id/action_item_add_group"
+            android:icon="@android:drawable/ic_menu_add"
+            android:showAsAction="ifRoom"
+            android:title="Add New Group" />
+
+        <item
+            android:id="@+id/btn_logout"
+            android:icon="@drawable/ic_baseline_arrow_back_24"
+            android:showAsAction="ifRoom"
+            android:title="Logout" />
+    </group>
+</menu>

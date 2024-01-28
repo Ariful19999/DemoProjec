@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".group_post">
+
+        <ImageView
+            android:id="@+id/group_photo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/group_avatar" />
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Computer Science and Engineering"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_photo" />
+
+        <LinearLayout
+            android:id="@+id/add_member_all_member_dup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_name"
+            tools:gravity="center_horizontal">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:id="@+id/add_member_all_member"
+               android:layout_height="wrap_content">
+               <com.google.android.material.floatingactionbutton.FloatingActionButton
+                   android:id="@+id/floatingActionButton_member"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="10dp"
+                   android:layout_weight="1"
+                   android:clickable="true"
+                   android:layout_marginBottom="5dp"
+                   app:srcCompat="@drawable/single_avatar"
+                   tools:textAlignment="center"
+                   android:contentDescription="See Group Member" />
+
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/add_member"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:layout_marginBottom="5dp"
+                   android:background="@drawable/radius"
+                   android:fontFamily="sans-serif"
+                   android:paddingLeft="20dp"
+                   android:paddingRight="20dp"
+                   android:text="Add Member"
+                   android:textAllCaps="true"
+                   android:textColor="#fafafa"
+                   android:textSize="18sp"
+                   android:textStyle="bold">
+
+               </androidx.appcompat.widget.AppCompatButton>
+           </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton_add_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+
+                android:clickable="true"
+                app:srcCompat="@android:drawable/ic_menu_edit"
+                tools:textAlignment="center" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pending_post_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_member_all_member_dup">
+
+            <Button
+                android:id="@+id/view_pending_post"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_radius_10_px"
+                android:text="View Pending Post"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email2"></Button>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pending_post_layout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewGroupPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="96dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

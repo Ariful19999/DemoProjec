@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".add_group_post">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/back3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:text="Add New Group Post"
+            android:textColor="#FDFDFD"
+            android:textSize="23sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:id="@+id/group_name"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:text="Group Name"
+            android:textColor="#304FFE"
+            android:textSize="23sp"
+            android:textStyle="bold">
+        </TextView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField5"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="200dp"
+            android:hint="write post text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/postText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="24sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/recycler_view_for_photos" />
+
+        <!--        <HorizontalScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:layout_height="150dp">-->
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:layout_marginLeft="10dp"-->
+        <!--                android:layout_marginRight="10dp"-->
+        <!--                android:layout_height="match_parent">-->
+
+        <!--            </LinearLayout>-->
+
+
+        <!--        </HorizontalScrollView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="20dp"
+                android:id="@+id/addPhotos"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/radius"
+                android:text="Add Photos"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="5dp"
+                android:textAllCaps="false"
+                android:textColor="#fafafa"
+                android:textSize="18sp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="20dp"
+                android:id="@+id/removePhotos"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/radius"
+                android:text="Remove Photos"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="5dp"
+                android:textAllCaps="false"
+                android:textColor="#fafafa"
+                android:textSize="18sp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true">
+
+        </VideoView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="20dp"
+            android:id="@+id/selectVideoButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/radius"
+            android:text="Add Videos"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="false"
+            android:textColor="#fafafa"
+            android:textSize="18sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/color_warning"
+            android:text="Add Post"
+            android:textAllCaps="false"
+            android:textColor="#fafafa"
+            android:textSize="20sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+
+    </LinearLayout>
+</ScrollView>
+

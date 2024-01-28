@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".add_group_member">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Computer Science and Engineering"
+            android:textAlignment="center"
+            android:textSize="32sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerViewAddMember"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addSelectedMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/color_warning"
+            android:text="Add Selected Member"
+            android:textAllCaps="false"
+            android:textColor="#fafafa"
+            android:textSize="20sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+    </LinearLayout>
+</ScrollView>
+
